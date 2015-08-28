@@ -47,3 +47,4 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 MIT
 # generator-gulp-angular-node
 # generator-gulp-angular-node
+# generator-gulp-angular-node
