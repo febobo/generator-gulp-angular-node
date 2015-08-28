@@ -1,0 +1,24 @@
+{
+  "name": "gulp-angular-node",
+  "version": "0.0.0",
+  "homepage": "https://github.com/febobo/generator-gulp-angular-node",
+  "authors": [
+    "febobo <584516601@qq.com>"
+  ],
+  "keywords": [
+    "node",
+    "angular",
+    "generator",
+    "gulp",
+    "yo",
+    "yeoman"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
