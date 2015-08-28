@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
+var wiredep = require('wiredep').stream;
 var build = require('gulp-build');
 gulp.paths = {
   demo : 'demo',
-  public : 'app'
+  public : 'app',
+  src : ['app/client/modules']
 }
 
 gulp.task('browser-sync', function() {
@@ -39,6 +41,14 @@ gulp.task('nodemon', function(cb) {
   })
 });
 
+gulp.task('inject', function () {
+  gulp.src(gulp.paths.public + '/.tmp/index.html')
+    .pipe(wiredep({
+          optional: 'configuration',
+          goes: 'here'
+        }))
+    .pipe(gulp.dest('./app'));
+});
 
 var options = {
   helpers: [{
@@ -54,6 +64,6 @@ gulp.task('build' , function(){
 })
 
 
-gulp.task('serve' , ['nodemon','browser-sync' , 'watch']);
+gulp.task('serve' , [ 'nodemon','browser-sync' , 'watch' , 'inject'  ]);
 
 
