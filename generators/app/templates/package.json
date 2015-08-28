@@ -18,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/febobo/generator-gulp-angular-node/issues"
   },
-  "homepage": "https://github.com/febobo/generator-gulp-angular-node"
+  "homepage": "https://github.com/febobo/generator-gulp-angular-node",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-build": "^0.5.3",
+    "gulp-nodemon": "^2.0.4",
+    "nodemon": "^1.4.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongoose": "^4.1.3"
+  }
 }
