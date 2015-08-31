@@ -3,6 +3,7 @@ var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
 var wiredep = require('wiredep').stream;
 var build = require('gulp-build');
+var $ = require('gulp-load-plugins')();
 gulp.paths = {
   demo : 'demo',
   public : 'app',
@@ -14,8 +15,8 @@ gulp.task('browser-sync', function() {
   browserSync.init({
     proxy: 'localhost:5008',
     files : [gulp.paths.demo + "/*.*" , gulp.paths.public + "/*.*"],
-    notify: true
-  });
+    notify: true,
+ });
 
 });
 
@@ -42,12 +43,18 @@ gulp.task('nodemon', function(cb) {
 });
 
 gulp.task('inject', function () {
-  gulp.src(gulp.paths.public + '/.tmp/index.html')
-    .pipe(wiredep({
-          optional: 'configuration',
-          goes: 'here'
-        }))
-    .pipe(gulp.dest('./app'));
+var injectStyle = gulp.src(['client/**/*.js','client/*.js','client/**/**/.js'
+    ]);
+var injectJs = gulp.src(['client/styles/*.css'
+    ]);
+gulp.src(gulp.paths.public + '/.tmp/index.html')
+.pipe($.inject(injectJs))
+.pipe($.inject(injectStyle))
+.pipe(wiredep({
+        optional: 'configuration',
+        goes: 'here'
+    }))
+.pipe(gulp.dest('./app'));
 });
 
 var options = {

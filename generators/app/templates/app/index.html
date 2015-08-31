@@ -1,20 +1,26 @@
 <html>
-  <head>
-    <title>
-      yeoman hello
-    </title>
-    <!-- bower:css -->
-    <!-- endbower -->
-  </head>
-  <body ng-app="febobo">
-    <h1>yeoman hello</h1>
-    <div ui-view></div>
-    <!-- bower:js -->
-    <script src="../../bower_components/angular/angular.js"></script>
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <!-- endbower -->
-  </body>
+    <head>
+        <title>wiredep</title>
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="/client/styles/index.css">
+        <!-- endinject -->
+    </head>
+    <body ng-app="febobo">
+        <h1>wiredep</h1>
+        <div ui-view></div>
+        <!-- bower:js -->
+        <script src="../../bower_components/angular/angular.js"></script>
+        <script src="../../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- endbower -->
+        <!-- inject:js -->
+        <script src="/client/index.js"></script>
+        <script src="/client/config/route.js"></script>
+        <script src="/client/public/modules/home/controller/home.controller.js"></script>
+        <!-- endinject -->
+    </body>
 </html>
