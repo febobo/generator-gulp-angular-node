@@ -1,6 +1,4 @@
-# generator-gulp-angular-node [![Build Status](https://secure.travis-ci.org/febobo/generator-gulp-angular-node.png?branch=master)](https://travis-ci.org/febobo/generator-gulp-angular-node)
-
-> [Yeoman](http://yeoman.io) generator
+# generator-gulp-angular-node 
 
 
 ## Getting Started
@@ -45,6 +43,8 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 ## License
 
 MIT
-# generator-gulp-angular-node
-# generator-gulp-angular-node
-# generator-gulp-angular-node
+
+## Q&A
+
+@febobo
+
