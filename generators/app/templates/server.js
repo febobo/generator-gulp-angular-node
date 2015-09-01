@@ -10,6 +10,7 @@ app.get('/' , function(res){
   res.render('index.html');
 })
 
+// your db
 mongoose.connect('mongodb://localhost/febobo')
 app.listen(port, function(){
   console.log('listen port' + port)

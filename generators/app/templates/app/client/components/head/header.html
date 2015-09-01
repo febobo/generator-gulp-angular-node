@@ -1,0 +1,9 @@
+<nav class="navbar navbar-inverse" ng-controller="headController">
+<div class="container">
+   <ul class="nav navbar-nav">
+      <li ng-repeat="nav in vm.nav track by $index">
+      <a ui-sref="{{nav.url}}">{{nav.name}}</a>
+      </li>
+   </ul>
+   </div>
+</nav>
