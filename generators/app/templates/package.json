@@ -1,5 +1,5 @@
 {
-  "name": "gulp-angular-node",
+  "name": "generator-gulp-angular-node",
   "version": "1.0.0",
   "description": "快速构建你的node项目",
   "main": "index.js",
@@ -10,8 +10,13 @@
     "type": "git",
     "url": "https://github.com/febobo/generator-gulp-angular-node"
   },
+  "files" : [
+    "app",
+    "router"
+  ],
   "keywords": [
-    "generator"
+    "generator",
+    "yeoman-generator"
   ],
   "author": "febobo",
   "license": "ISC",
