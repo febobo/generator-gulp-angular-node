@@ -2,26 +2,24 @@
     <head>
         <title>wiredep</title>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <!-- build:css style/vendor.css -->
         <!-- bower:css -->
         <!-- endbower -->
+        <!-- endbuild:vendor.css -->
+        <!-- build:css style/app.css -->
         <!-- inject:css -->
-        <link rel="stylesheet" href="/client/styles/index.css">
         <!-- endinject -->
+        <!-- endbuild:app.css -->
     </head>
     <body ng-app="febobo">
         <div ui-view></div>
+        <!-- build:js script/vendor.js -->
         <!-- bower:js -->
-        <script src="../../bower_components/angular/angular.js"></script>
-        <script src="../../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- endbower -->
+        <!-- endbuild:vendor.js -->
+        <!-- build:js script/app.js -->
         <!-- inject:js -->
-        <script src="/client/index.js"></script>
-        <script src="/client/config/route.js"></script>
-        <script src="/client/components/head/header.controller.js"></script>
-        <script src="/client/public/modules/home/controller/home.controller.js"></script>
         <!-- endinject -->
+        <!-- endbuild:app.js -->
     </body>
 </html>

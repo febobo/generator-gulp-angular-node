@@ -10,12 +10,12 @@ gulp.task('inject' , function(){
     var scriptInject = gulp.src(['client/**/*.js','client/*.js','client/**/**/.js'])
     // .pipe($.angularFilesort());
 
-    gulp.src(gulp.paths.app + '/.tmp/index.html')
+    gulp.src(gulp.paths.app + '/index.html')
     .pipe($.inject(styleInject))
     .pipe($.inject(scriptInject))
     .pipe(wiredep({
         optional: 'configuration',
         goes: 'here'
     }))
-    .pipe(gulp.dest(gulp.paths.app));
+    .pipe(gulp.dest(gulp.paths.tmp));
 })
